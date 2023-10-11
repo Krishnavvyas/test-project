@@ -52,7 +52,7 @@
               <div *ngIf="email.errors?.['maxlength']">
                 Email must have at most 250 characters.
               </div>
-              <div *ngIf="!email.errors?.['required'] && !email.errors?.['minlength'] && !email.errors?.['maxlength'] && email.errors?.['emailValidator']">
+              <div *ngIf="customerDetailsForm.get('email')?.invalid && customerDetailsForm.get('email')?.touched">
                 Invalid email format.
               </div>
             </div>
@@ -73,18 +73,13 @@
           <div class="col mb-2">
             <label for="accountNo" class="form-label">Card Type:</label>
             <div class="dropdown">
-              <select
-              class="custom-select mb-3 btn btn-secondary"
-              (change)="changeType($event)"
-              formControlName="cardType"
-            >
-              <option *ngFor="let card of cards" [ngValue]="card">
-                {{ card }}
-              </option>
-            </select>
-    
+              <select class="custom-select mb-3 btn btn-secondary" (change)="changeType($event)" required formControlName="cardType" [class.is-invalid]="cardType.invalid && (cardType.dirty || cardType.touched)">
+                <option *ngFor="let card of cards" [ngValue]="card">
+                  {{ card }}
+                </option>
+              </select>
             </div>
-            <div class="invalid-feedback">
+            <div *ngIf="cardType.invalid && (cardType.dirty || cardType.touched)" class="invalid-feedback-dropdown">
               <div *ngIf="cardType.errors?.['required']">
                 Card type is required.
               </div>

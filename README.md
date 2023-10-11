@@ -15,9 +15,9 @@ Application consists of -
 2. Common component for header nav bar - HeaderDetailsComponent is used across all the pages to access common navigations.
 3. Common stylings are placed in style.scss to follow DRY principle.
 4. Local storage concept is being used to store user details.
-4. Bootstrap is used for stylings.
-5. Interface IUser in CustomerDetailsFormComponent to demostrate use of Types, Interface.
-6. Unit test for UserLandingPageComponent and HeaderDetailsComponent is written. Note: Due to time contraints complete code coverage isn't achieved.
+5. Bootstrap is used for stylings.
+6. Interface IUser in CustomerDetailsFormComponent to demostrate use of Types, Interface.
+7. Unit test for UserLandingPageComponent and HeaderDetailsComponent is written. Note: Due to time contraints complete code coverage isn't achieved.
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 
@@ -30,8 +30,10 @@ Application consists of -
 ![Alt text](image-4.png)
 
 ## Note
-Angular 16 is used to develop this application.
-No connection to backend services is available.
-Localstorage concept is being used to store user details.
-Please ignore the content of all the pages. Content is copied fron internet just to represent blocks.
-Complete responsive behavior on multiple devices type isn't taken care currently due to time contraints.
+1. Angular 16 is used to develop this application.
+2. No connection to backend services is available.
+3. Localstorage concept is being used to store user details.
+4. Please ignore the content of all the pages. Content is copied fron internet just to represent blocks.
+5. Complete responsive behavior on multiple devices type isn't taken care currently due to time contraints.
+6. Limited features are available in application as it is build in 1-2 days only.
+7. Enhancements would be done in near future if required.

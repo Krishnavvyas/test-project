@@ -41,7 +41,8 @@ export class CustomerDetailsFormComponent implements OnInit {
       email: new FormControl(this.user.email, [
         Validators.required,
         Validators.minLength(5),
-        Validators.maxLength(50)
+        Validators.maxLength(50),
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
       ]),
       accountNo: new FormControl(this.user.accountNo, [
         Validators.required,
