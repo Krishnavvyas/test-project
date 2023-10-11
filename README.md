@@ -31,3 +31,4 @@ Application consists of -
 ## Note
 
 Please ignore the content of all the pages. Content is copied fron internet just to represent blocks.
+Complete ersponsive behavior on multiple devices type isn't taken care currently due to time contraints.
