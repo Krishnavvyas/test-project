@@ -31,12 +31,15 @@
         </div>
         <div class="row">
           <div class="col mb-2">
-            <label for="age" class="form-label">Age:</label>
-            <input type="number" id="age" name="age" formControlName="age" placeholder="Your age" maxlength="2"
-              class="form-control form-control-sm" [class.is-invalid]="age.invalid && (age.dirty || age.touched)">
-            <div *ngIf="age.invalid && (age.dirty || age.touched)" class="invalid-feedback">
-              <div *ngIf="age.errors?.['required']">
-                Age is required.
+            <label for="phoneNumber" class="form-label">Conatct Number:</label>
+            <input type="number" id="phoneNumber" name="phoneNumber" formControlName="phoneNumber" placeholder="Your phoneNumber" minlength="6"
+              class="form-control form-control-sm" [class.is-invalid]="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+            <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="invalid-feedback">
+              <div *ngIf="phoneNumber.errors?.['required']">
+                Number is required.
+              </div>
+              <div *ngIf="phoneNumber.errors?.['pattern']">
+                Number must have atleast 6 digits.
               </div>
             </div>
           </div>

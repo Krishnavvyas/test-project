@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 interface IUser {
   name: string;
-  age: number;
+  phoneNumber: number;
   email: string;
   accountNo: number;
   cardType: string;
@@ -34,9 +34,9 @@ export class CustomerDetailsFormComponent implements OnInit {
         Validators.maxLength(50),
         Validators.pattern('^[a-zA-Z ]*$')
       ]),
-      age: new FormControl(this.user.age, [
+      phoneNumber: new FormControl(this.user.phoneNumber, [
         Validators.required,
-        Validators.maxLength(2),
+        Validators.pattern('[- +()0-9]{6,}')
       ]),
       email: new FormControl(this.user.email, [
         Validators.required,
@@ -59,8 +59,8 @@ export class CustomerDetailsFormComponent implements OnInit {
     return this.customerDetailsForm.get('name')!;
   }
 
-  get age() {
-    return this.customerDetailsForm.get('age')!;
+  get phoneNumber() {
+    return this.customerDetailsForm.get('phoneNumber')!;
   }
 
   get email() {

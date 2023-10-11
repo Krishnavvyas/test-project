@@ -25,9 +25,9 @@ Application consists of -
 
 ![Alt text](image-2.png)
 
-![Alt text](image-3.png)
+![Alt text](image-6.png)
 
-![Alt text](image-4.png)
+![Alt text](image-5.png)
 
 ## Note
 1. Angular 16 is used to develop this application.
