@@ -29,6 +29,12 @@ Application consists of -
 
 ![Alt text](image-5.png)
 
+![image](https://github.com/Krishnavvyas/test-project/assets/47623042/fa1562f9-60b4-4122-be3d-06e18929d0ec)
+
+![image](https://github.com/Krishnavvyas/test-project/assets/47623042/cdce5982-c337-45e9-a6c8-b6839c55f86c)
+
+
+
 ## Note
 1. Angular 16 is used to develop this application.
 2. No connection to backend services is available.
