@@ -1,0 +1,106 @@
+<div>
+  <app-header-details></app-header-details>
+</div>
+<div class="container-fluid py-3">
+  <h1 class="d-flex justify-content-center">Apply for Instant Credit Card</h1>
+  
+  <div class="row justify-content-center my-5">
+    <div class="col-4">
+      <form [formGroup]="customerDetailsForm" #form="ngForm">
+        <div class="row">
+          <div class="col mb-2">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" formControlName="name" placeholder="Your name" required minlength="3" maxlength="50" class="form-control form-control-sm" [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+              <div *ngIf="name.errors?.['required']">
+                Name is required.
+              </div>
+              <div *ngIf="name.errors?.['minlength']">
+                Name must have at least 3 character.
+              </div>
+              <div *ngIf="name.errors?.['maxlength']">
+                Name must have at most 50 characters.
+              </div>
+              <div *ngIf="name.errors?.['pattern']">
+                Name can have aplhabtes & space only.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <label for="age" class="form-label">Age:</label>
+            <input type="number" id="age" name="age" formControlName="age" placeholder="Your age" maxlength="2" class="form-control form-control-sm" [class.is-invalid]="age.invalid && (age.dirty || age.touched)">
+            <div *ngIf="age.invalid && (age.dirty || age.touched)" class="invalid-feedback">
+              <div *ngIf="age.errors?.['required']">
+                Age is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" formControlName="email" placeholder="your-name@provider.com" required minlength="5" maxlength="250" class="form-control form-control-sm" [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+              <div *ngIf="email.errors?.['required']">
+                Email is required.
+              </div>
+              <div *ngIf="email.errors?.['minlength']">
+                Email must have at least 5 character.
+              </div>
+              <div *ngIf="email.errors?.['maxlength']">
+                Email must have at most 250 characters.
+              </div>
+              <div *ngIf="!email.errors?.['required'] && !email.errors?.['minlength'] && !email.errors?.['maxlength'] && email.errors?.['emailValidator']">
+                Invalid email format.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <label for="accountNo" class="form-label">Account Number:</label>
+            <input type="number" id="accountNo" name="accountNo" formControlName="accountNo" placeholder="Your accountNo" minlength="5" maxlength="10" class="form-control form-control-sm" [class.is-invalid]="accountNo.invalid && (accountNo.dirty || accountNo.touched)">
+            <div *ngIf="accountNo.invalid && (accountNo.dirty || accountNo.touched)" class="invalid-feedback">
+              <div *ngIf="accountNo.errors?.['required']">
+                Account Number is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <label for="accountNo" class="form-label">Card Type:</label>
+            <div class="dropdown">
+              <select
+              class="custom-select mb-3 btn btn-secondary"
+              (change)="changeType($event)"
+              formControlName="cardType"
+            >
+              <option *ngFor="let card of cards" [ngValue]="card">
+                {{ card }}
+              </option>
+            </select>
+    
+            </div>
+            <div class="invalid-feedback">
+              <div *ngIf="cardType.errors?.['required']">
+                Card type is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2 d-grid card-hover">
+            <button type="button" class="btn btn-sm btn-success" (click)="validate()">Get Card</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="showBanner" class="alert alert-danger fade show width-30 d-flex mx-auto">
+    <strong>Failure! </strong> Card already exists for this account number.
+</div>
+</div>
+  

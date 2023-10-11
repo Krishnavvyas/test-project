@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap");
+
+@import "../../../../styles.scss";
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+header {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* styling the logo  */
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #666;
+    display: inline-block;
+}
+
+.logo i {
+    padding-right: 1rem;
+    color: black;
+}
+
+.order {
+    text-shadow: -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow, 1px 1px yellow;
+}
+
+
+
+.card-button {
+    display: block;
+    text-align: center;
+    width: 80%;
+    padding: 10px 0px 10px;
+}
+
+.body-back {
+    color: black;
+    background-color: black;
+    width: auto;
+    height: 50px;
+}
+
+.card-details {
+    padding: 40px 0px 10px;
+
+}
