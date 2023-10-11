@@ -1,27 +1,25 @@
-# TestProject
+# Project description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+## Card Management
 
-## Development server
+Application consists of - 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Home Page -> Navigation bar (Home, Srvices, about us), Type of cards(with hover effect), and apply for credit card button.
+Services -> Services offered by the company with hover effect.
+About Us - Details about the company.
+On click of get credit card now from home page -> Customer details form opens up -> customer fills the data (All the field are mandatory & customer cannot order same type of credit card on same account number)
+On click of Get Card, If all the details are valid -> Customer would be navigated to a dummy card status page.
 
-## Code scaffolding
+## Coding standards
+1. Lazy loading concept has been used.
+2. Common component for header nav bar - HeaderDetailsComponent is used across all the pages to access common navigations.
+3. Common stylings are placed in style.scss to follow DRY principle.
+4. Bootstrap is used for stylings.
+5. Unit test for UserLandingPageComponent and HeaderDetailsComponent is written. Note: Due to time contraints complete code coverage isn't achieved.
+![Alt text](image.png)
+![Alt text](image-1.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Note
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Please ignore the content of all the pages. Content is copied fron internet just to represent blocks.

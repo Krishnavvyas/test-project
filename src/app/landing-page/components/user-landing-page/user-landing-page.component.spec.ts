@@ -28,6 +28,5 @@ describe('UserLandingPageComponent', () => {
     const navigateSpy = spyOn(router, 'navigateByUrl');
     component.getCustomerDetails();
     expect(navigateSpy).toHaveBeenCalled();
-
   });
 });
