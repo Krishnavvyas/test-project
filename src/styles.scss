@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+.padding-top-15 {
+    padding-top: 15%;
+}
+
+.container-1-bg {
+    background-color: bisque;
+}
+
+.container-1-bg:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.container-width-80 {
+    padding-left: 10%;
+    width: 90%;
+}
+
+.container-2-bg {
+    background-color: #99ccff;
+}
+
+.container-2-bg:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.card-hover:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
