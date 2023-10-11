@@ -22,7 +22,7 @@ export class CustomerDetailsFormComponent implements OnInit {
   showBanner = false;
   cards = ["Platinum Card", "Silver Card", "Gold Card", "Master Card"]
 
-  constructor(private router : Router) {
+  constructor(private router: Router) {
     this.user = {} as IUser;
   }
 
@@ -84,15 +84,11 @@ export class CustomerDetailsFormComponent implements OnInit {
       return;
     }
     this.user = this.customerDetailsForm.value;
-    console.log("userrrr", this.user)
     const data = localStorage.getItem("userDetails") || null;
-    console.log("daaaaa", data);
     if (data) {
       this.userData = JSON.parse(data);
-      console.log("userData", this.userData)
       this.userData.forEach(element => {
         if (element.accountNo === this.customerDetailsForm.get("accountNo")!.value && element.cardType === this.customerDetailsForm.get("cardType")!.value) {
-          console.log("hiiii")
           this.showBanner = true;
           return;
         }
@@ -108,9 +104,7 @@ export class CustomerDetailsFormComponent implements OnInit {
   }
 
   changeType(event: any): void {
-    console.log("eventtt", event)
     let idx = event.target.value;
-    console.log('id:', idx);
     this.customerDetailsForm.controls['cardType'].clearValidators();
 
     if (idx == 0) {
